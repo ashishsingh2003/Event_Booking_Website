@@ -37,7 +37,7 @@ useEffect(()=>{
 },[]);
 const getevent=async ()=>{
 try {
-  let res=await axios.get('event-booking-website-back-n6kg3y0n0-ashishsingh2003s-projects.vercel.app/getevent');
+  let res=await axios.get('https://event-booking-website-2.onrender.com/getevent');
   console.log(res)
   setevents(res.data);
 } catch (error) {
@@ -51,7 +51,7 @@ const searchevent=async (e)=>{
   const searcheve=searche.current.value;
 
   try {
-    let res=await axios.get(`event-booking-website-back-n6kg3y0n0-ashishsingh2003s-projects.vercel.app/searchevent/${searcheve}`);
+    let res=await axios.get(`https://event-booking-website-2.onrender.com/searchevent/${searcheve}`);
      
       console.log(res.data)
       if(res.data){
