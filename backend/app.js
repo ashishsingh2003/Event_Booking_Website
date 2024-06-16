@@ -1,4 +1,5 @@
-
+const dotenv=require('dotenv');
+dotenv.config("");
 const express=require('express');
 const app=express();
 let Event=require('./models/Event');
@@ -9,13 +10,19 @@ const userroute=require('./apis/userroute')
 const cors=require('cors');
 const session=require('express-session');
 const eventroute=require('./apis/eventroute');
-mongoose.connect('mongodb://127.0.0.1:27017/Event')
+app.use(express.urlencoded({extended:true}));
+//seedDB();
+app.use(express.json());
+
+
+mongoose.connect("mongodb+srv://ashishsinghrana39:3xjkVUvNWM8yCpfp@cluster0.6x8095z.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 .then(()=>{
     console.log("db connected");
 })
 .catch((err)=>{
     console.log("error");
 })
+
 
 app.use(session({
     secret: 'keyboard cat',
@@ -27,9 +34,7 @@ app.use(session({
       maxAge:24*7*60*60*1000
      }
   }))
-app.use(express.urlencoded({extended:true}));
-//seedDB();
-app.use(express.json());
+
 app.use(cors({origin:['http://localhost:5173']}));
 app.use(userroute);
 app.use(eventroute);
