@@ -35,7 +35,13 @@ app.use(session({
      }
   }))
 
-app.use(cors({origin:['event-booking-website-brz8x72xt-ashishsingh2003s-projects.vercel.app']}));
+
+app.use(cors({ 
+    origin:['event-booking-website-brz8x72xt-ashishsingh2003s-projects.vercel.app','http://localhost:5173'],
+   credentials:true,
+    methods:["GET","POST","PATCH","DELETE"],
+    headers: ["Content-Type", "Authorization", "Origin", "Accept"]
+ }));
 app.use(userroute);
 app.use(eventroute);
 //app.use(payment);
