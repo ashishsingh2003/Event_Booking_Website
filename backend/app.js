@@ -20,7 +20,7 @@ mongoose.connect("mongodb+srv://ashishsinghrana39:3xjkVUvNWM8yCpfp@cluster0.6x80
     console.log("db connected");
 })
 .catch((err)=>{
-    console.log("error");
+    console.log(err.message);
 })
 
 
