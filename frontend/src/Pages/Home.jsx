@@ -21,7 +21,7 @@ const getLocation = async () => {
 
 const login=async ()=>{
   try {
-  let res=await axios.get('event-booking-website-back-n6kg3y0n0-ashishsingh2003s-projects.vercel.app/getlog');
+  let res=await axios.get('https://event-booking-website-2.onrender.com/getlog');
   console.log(res.data);
   if(res.data.msg!="true")
   {

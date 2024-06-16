@@ -6,7 +6,7 @@ function Success() {
     const navigate=useNavigate();
     const seatbook=async ()=>{
         try {
-            let res=await axios.put(`event-booking-website-back-n6kg3y0n0-ashishsingh2003s-projects.vercel.app/seat/${params.id}`);
+            let res=await axios.put(`https://event-booking-website-2.onrender.com/seat/${params.id}`);
             console.log(res);
             navigate('/');
         } catch (error) {

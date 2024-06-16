@@ -51,7 +51,7 @@ function Addevent() {
 
     else {
       try {
-        let res=await axios.post('event-booking-website-back-n6kg3y0n0-ashishsingh2003s-projects.vercel.app/addevent',{img,event,date,seatleft,price,location});
+        let res=await axios.post('https://event-booking-website-2.onrender.com/addevent',{img,event,date,seatleft,price,location});
         navigate('/');
      } catch (error) {
       console.log("can not add");

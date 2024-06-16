@@ -5,7 +5,7 @@ function Event(props) {
   let navigate=useNavigate();
   const checkout=async ()=>{
     try {
-        const res=await fetch("event-booking-website-back-n6kg3y0n0-ashishsingh2003s-projects.vercel.app/checkout",{
+        const res=await fetch("https://event-booking-website-2.onrender.com/checkout",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",
@@ -44,7 +44,7 @@ function Event(props) {
   }
   const deleteevent=async ()=>{
     try {
-      let res=await axios.post(`http://localhost:8081/delete/${props.id}`);
+      let res=await axios.post(`https://event-booking-website-2.onrender.com/delete/${props.id}`);
       console.log(res);
       props.getevent();
       navigate('/')
