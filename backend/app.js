@@ -35,13 +35,18 @@ app.use(session({
      }
   }))
 
-
+  app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*'); // Allows all origins
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    next();
+  });
 app.use(cors({ 
     origin:['event-booking-website-brz8x72xt-ashishsingh2003s-projects.vercel.app','http://localhost:5173'],
    credentials:true,
     methods:["GET","POST","PATCH","DELETE"],
-    headers: ["Content-Type", "Authorization", "Origin", "Accept"]
- }));
+    headers: ["Content-Type", "Authorization", "Origin", "Accept"]
+}));
 app.use(userroute);
 app.use(eventroute);
 //app.use(payment);
