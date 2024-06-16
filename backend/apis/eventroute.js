@@ -20,7 +20,7 @@ router.get('/getevent',async (req,res)=>{
         let events=await Event.find();
     res.json(events);
     } catch (error) {
-        res.json({});
+        res.json({msg:'error'});
     }
     
 })
