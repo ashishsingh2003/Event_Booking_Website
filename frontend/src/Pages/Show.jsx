@@ -8,7 +8,7 @@ function Show() {
     let [events,setevent]=useState({img:'',event:'',date:'',seatleft:0,price:0,location:''})
     const showevent=async ()=>{
         try {
-            let res=await axios.get(`http://localhost:8081/getevent/${params.id}`);
+            let res=await axios.get(`event-booking-website-back-n6kg3y0n0-ashishsingh2003s-projects.vercel.app/getevent/${params.id}`);
             let {img,event,date,seatleft,price,location}=res.data;
             setevent({img,event,date,seatleft,price,location});
             console.log(res);
@@ -20,7 +20,7 @@ function Show() {
     }
     const addtocart=async ()=>{
         try {
-            let res=await axios.post(`http://localhost:8081/addtocart/${params.id}`);
+            let res=await axios.post(`event-booking-website-back-n6kg3y0n0-ashishsingh2003s-projects.vercel.app/addtocart/${params.id}`);
             console.log(res);
         } catch (error) {
             console.log("can not add");

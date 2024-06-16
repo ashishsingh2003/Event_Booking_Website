@@ -40,7 +40,7 @@ function Signup() {
 
       else {
         try{
-          let res=await axios.post('http://localhost:8081/register',{username,email,password})
+          let res=await axios.post('event-booking-website-back-n6kg3y0n0-ashishsingh2003s-projects.vercel.app/register',{username,email,password})
             toast.success("User Register successfully",{
             position:"top-center"
           });

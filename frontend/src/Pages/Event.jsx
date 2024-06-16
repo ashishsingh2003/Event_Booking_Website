@@ -5,7 +5,7 @@ function Event(props) {
   let navigate=useNavigate();
   const checkout=async ()=>{
     try {
-        const res=await fetch("http://localhost:8081/checkout",{
+        const res=await fetch("event-booking-website-back-n6kg3y0n0-ashishsingh2003s-projects.vercel.app/checkout",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",

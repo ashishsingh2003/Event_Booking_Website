@@ -53,7 +53,7 @@ function Edit() {
         else {
          try {
            
-            let res=await axios.put(`http://localhost:8081/edit/${params.id}`,{img,event,date,seatleft,price,location});
+            let res=await axios.put(`event-booking-website-back-n6kg3y0n0-ashishsingh2003s-projects.vercel.app/edit/${params.id}`,{img,event,date,seatleft,price,location});
             navigate('/');
          } catch (error) {
             console.log("can not edit");
