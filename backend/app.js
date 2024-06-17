@@ -42,7 +42,7 @@ app.use(session({
     next();
   });
 app.use(cors({ 
-    origin:['event-booking-website-brz8x72xt-ashishsingh2003s-projects.vercel.app','http://localhost:5173'],
+    origin:['event-booking-website-30fswb5js-ashishsingh2003s-projects.vercel.app','http://localhost:5173'],
    credentials:true,
     methods:["GET","POST","PATCH","DELETE"],
     headers: ["Content-Type", "Authorization", "Origin", "Accept"]
@@ -86,8 +86,8 @@ app.post('/checkout',async (req,res)=>{
                
             }),
            
-            success_url:`event-booking-website-brz8x72xt-ashishsingh2003s-projects.vercel.app/success/${req.body.items[0].id}`,
-            cancel_url:"event-booking-website-brz8x72xt-ashishsingh2003s-projects.vercel.app/cancel"
+            success_url:`http://localhost:5173/success/${req.body.items[0].id}`,
+            cancel_url:"http://localhost:5173/cancel"
 
         })
        
