@@ -86,8 +86,8 @@ app.post('/checkout',async (req,res)=>{
                
             }),
            
-            success_url:`http://localhost:5173/success/${req.body.items[0].id}`,
-            cancel_url:"http://localhost:5173/cancel"
+            success_url:`event-booking-website-brz8x72xt-ashishsingh2003s-projects.vercel.app/success/${req.body.items[0].id}`,
+            cancel_url:"event-booking-website-brz8x72xt-ashishsingh2003s-projects.vercel.app/cancel"
 
         })
        
